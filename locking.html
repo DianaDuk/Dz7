@@ -1,0 +1,16 @@
+<script>
+    function createCalculator(){
+        let sum = 0
+
+        return function(num){
+        sum += num
+        return sum
+        }
+    }
+
+    const sum = createCalculator()
+    console.log (sum(4))
+    console.log (sum(8))
+    console.log (sum(22))
+    console.log (sum(15))
+</script>
