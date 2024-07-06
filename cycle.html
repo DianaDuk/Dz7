@@ -1,0 +1,32 @@
+<script>
+   function promptNumber() {
+    let userInput;
+    
+    for (let i = 0; i < 10; i++) {
+        userInput = prompt('Введіть число більше 100:');
+    
+        if (userInput === null) {
+            alert('Введення було скасовано.');
+            return;
+        }
+        
+        userInput = Number(userInput);
+       
+        if (userInput > 100) {
+            alert(`Ви ввели число більше 100: ${userInput}`);
+            return;
+        } else if (userInput <= 100) {
+            alert('Число менше або дорівнює 100, спробуйте ще раз.');
+        }
+  
+        if (isNaN(userInput)) {
+            alert('Будь ласка, введіть коректне число.');
+        }
+    }
+    
+    alert(`Останнє введене число: ${userInput}`);
+}
+
+promptNumber();
+
+</script>
